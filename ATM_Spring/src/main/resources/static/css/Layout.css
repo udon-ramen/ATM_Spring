@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/* ほぼすべてのhtmlファイル共通 */
+.center {
+    width: fit-content;
+    margin: auto;
+}
+
+/* login.html */
+.id {
+	display: flex;
+    justify-content: center;
+}
+
+.password {
+	display: flex;
+    justify-content: center;
+}
+
+.loginButton{
+	margin-top: 80px;
+}
+/* --------- */
+
+
+/* menu.html */
+.menu{
+	margin-top: 120px;
+	margin-bottom: 80px;
+}
+
+.center1{
+    margin: 100px 30px 70px 30px;
+}
+
+/*.center{*/
+/*    margin: 30px 30px 70px 530px;*/
+/*}*/
+
+/* --------- */

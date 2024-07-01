@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+.menu{
+	margin-top: 80px;
+}
+
+.id{
+	margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.password{
+    margin: 50px 30px 50px 30px;
+}
+
+.submit{
+    margin: 50px 30px 50px 30px;
+}

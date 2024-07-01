@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/Login.css}" rel="stylesheet" type="text/css"/>
+    <title>ログイン</title>
+</head>
+
+<body>
+	
+	<div style="text-align: center" class="menu">
+	  <p><font size="7">ログインしてください</font></p>
+　  </div>
+	
+    <div th:if="${param.error}" style="text-align: center"> <!-- リクエストパラメータの判定 -->
+        <div>
+          <font size="5">※UserNameまたは、Passwordが違います。</font> <!-- 認証エラーメッセージ -->
+        </div>
+    </div>
+
+    <form method="post" th:action="@{/authenticate}" class="center"> <!-- ログイン処理のパスを指定  -->
+    
+    	<div style="text-align: center" class="id">
+        	<font size="7"><label>UserName:</label></font>
+        	<input type="text" id="userName" name="userName"
+        	style="width:250px; height:60px; font-size:40px;"> <!-- ユーザ名の入力部 -->
+    	</div>
+    	
+    	<div style="text-align: center" class="password">
+	        <font size="7"><label>Password:</label></font>
+	        <input type="password" id="password" name="password"
+	        style="width:350px; height:60px; font-size:40px;"> <!-- パスワードの入力部 -->
+    	</div>
+    	
+    	<div style="text-align: center" class="submit">
+     	   <input type="submit" id="submit" value="ログイン"
+     	   style="width:225px; height:75px; font-size:45px;">
+    	</div>
+    	
+    </form>
+</body>
+</html>
+

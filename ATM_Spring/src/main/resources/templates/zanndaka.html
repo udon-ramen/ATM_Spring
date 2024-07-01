@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+<meta charset="UTF-8">
+<title>残高紹介</title>
+</head>
+
+<body>
+	
+	<div style="text-align: center" class="menu">
+	  <p><font size="7"> 残高です </font></p>
+　  </div>
+
+	<form method="post" class="center"> <!-- 引き出し処理のパスを指定  -->  
+    	<div style="text-align: center" class="message">
+        	<font size = 5><h1 th:text="${zanndaka}">円です</h1></font>
+    	</div> 	    	
+    </form>
+    
+    <form method="post" th:action="@{/logout}" class="center"> <!-- 「戻る」ボタン(1ページ) -->
+	    <div style="text-align: center" >
+			<input type="submit" id="submit" value="戻る"
+	     	 style="width:150px; height:50px; font-size:30px;">
+	    </div>
+    </form>
+    
+</body>
+
+</html>

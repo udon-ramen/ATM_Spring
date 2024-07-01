@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+<meta charset="UTF-8">
+<link th:href="@{/css/Hurikomi.css}" rel="stylesheet" type="text/css"/>
+<title>お振り込み</title>
+</head>
+
+<body>
+
+<div style="text-align: center" class="title">
+	  <p><font size="7"> お振り込み </font></p>
+　  </div>
+
+	<div style="text-align: center" class="menu">
+	  <p><font size="7"> 金額を入力してください </font></p>
+　  </div>
+
+	<form method="post" th:action="@{/ohurikomi}" class="center"> <!-- 引き出し処理のパスを指定  -->
+    	
+    	<div style="text-align: center" class="hurikomisaki">
+        	<font size="7"><label>振り込み先ID:</label></font>
+        	<input type="texte" id="hurikomisaki" name="hurikomisaki"
+        	style="width:250px; height:60px; font-size:40px;"> <!-- 引き出し金額の入力部 -->
+    	</div>
+    	
+    	<div style="text-align: center" class="id">
+        	<font size="7"><label>金額:</label></font>
+        	<input type="number" id="hurikomigaku" name="hurikomigaku"
+        	style="width:250px; height:60px; font-size:40px;"> <!-- 引き出し金額の入力部 -->
+    	</div>
+    	
+    	<div style="text-align: center" class="message">
+        	<font size = 5><h1 th:text="${message}"></h1></font>
+    	</div> 	
+    	
+    	<div style="text-align: center" class="submit">
+     	   <input type="submit" id="submit" value="振り込み"
+     	   style="width:150px; height:50px; font-size:30px;">
+    	</div>
+    	
+    </form>
+    
+    <form method="post" th:action="@{/menu}" class="back"> <!-- 「戻る」ボタン(1ページ) -->
+	    <div style="text-align: center" >
+			<input type="submit" id="submit" value="戻る"
+	     	 style="width:150px; height:50px; font-size:30px;">
+	    </div>
+    </form>
+    
+</body>
+</html>

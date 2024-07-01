@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/Layout.css}" rel="stylesheet" type="text/css"/>
+    <title>Menu</title>
+</head>
+
+<body>
+	
+    <div style="text-align: center" class="menu">
+	  <p><font size="7"> メニューを選んでください </font></p>
+　  </div>
+
+	<div style="text-align: center;" class="aaa">
+		
+		<form style="display:inline" method="post" 
+		th:action="@{/hikidasi}" class="center1">
+			<input type="submit" value="引き出し"
+			 style="width:200px; height:100px; font-size:35px;">
+		</form>
+		
+		<form style="display:inline" method="post" 
+		th:action="@{/azukeire}" class="center1">
+			<input type="submit" value="預け入れ"
+			 style="width:200px; height:100px; font-size:35px;">
+		</form>
+		
+		<form style="display:inline" method="post" 
+		th:action="@{/hurikomi}" class="center1">
+			<input type="submit" value="振り込み"
+			 style="width:200px; height:100px; font-size:35px;">
+		</form>
+		
+		<form style="display:inline" method="post" 
+		th:action="@{/zanndaka}" class="center1">
+			<input type="submit" value="残高照会"
+			 style="width:200px; height:100px; font-size:35px;">
+		</form>
+		
+		<form method="post" th:action="@{/logout}" class="center1">
+	        <input type="submit" value="ログアウト"
+			 style="width:250px; height:100px; font-size:35px;">
+	    </form>
+	    
+	</div>
+    
+</body>
+</html>
